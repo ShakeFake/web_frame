@@ -8,18 +8,19 @@ import (
 	"wilikidi/socket/utils"
 )
 
-func RrsTaskList(c *gin.Context) {
+func Validator(c *gin.Context) {
 	var s model.Student
 	if err := c.BindJSON(&s); err != nil {
-		utils.GenerateReturnData(c, utils.ParamsError, err.Error(), "")
+		utils.GenerateReturnData(c, utils.ParamsError, utils.ErrorTranslate(err), "")
 		return
 	}
 
 	log.Infof("request parameters is: %v", s)
 
 	response := service.InsertAStudent(s)
+	_ = response
 
-	utils.GenerateReturnData(c, utils.SUCCESS, "", response)
+	utils.GenerateReturnData(c, utils.SUCCESS, "", s)
 
 }
 

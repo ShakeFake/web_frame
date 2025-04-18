@@ -10,9 +10,13 @@ import (
 
 func main() {
 	utils.InitLogger()
+
 	utils.Config()
+
 	// 初始化一个 validator
-	binding.Validator = utils.VALIDATE
+	binding.Validator = utils.BindValidator()
+
+	// mysql 相关使用。
 
 	// gin 框架注册制中间件
 	router := gin.Default()
@@ -34,6 +38,7 @@ func main() {
 	})
 
 	router.GET("/ping", controller.Version)
+	router.POST("/validator", controller.Validator)
 
 	//router.RunTLS(":5002", "server.crt", "server.key")
 	router.Run(":8091")
