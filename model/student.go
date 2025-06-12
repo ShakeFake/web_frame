@@ -31,7 +31,7 @@ type Student struct {
 	// 注意这个不等于的大小写。 necsfield field不同
 	Name2 string `json:"name2" validate:"required,gte=5,lte=5,len=5,contains=cn,excludes=us,startswith=cn,endswith=cn,necsfield=Name"`
 
-	// 自定义注册 enum
+	// 自定义注册 enum。或者使用 oneof 也可以。
 	Sex Sex `json:"sex" validate:"enum"`
 
 	// 常用于校验密码是否相等, 长度是否符合要求。eqfield field 相同
