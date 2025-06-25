@@ -2,7 +2,7 @@ package service
 
 import (
 	"fmt"
-	"wilikidi/socket/model"
+	"wilikidi/gin/model"
 )
 
 func InsertAStudent(s model.Student) string {

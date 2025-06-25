@@ -4,8 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"net/http"
-	"wilikidi/socket/controller"
-	"wilikidi/socket/utils"
+	"wilikidi/gin/controller"
+	"wilikidi/gin/utils"
 )
 
 // @title WebFrame 接口文档

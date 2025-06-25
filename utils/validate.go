@@ -8,7 +8,7 @@ import (
 	zhTranslation "github.com/go-playground/validator/v10/translations/zh"
 	"reflect"
 	"sync"
-	"wilikidi/socket/model"
+	"wilikidi/gin/model"
 )
 
 var VALIDATE *DefaultValidator

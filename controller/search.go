@@ -3,9 +3,9 @@ package controller
 import (
 	log "github.com/cihub/seelog"
 	"github.com/gin-gonic/gin"
-	"wilikidi/socket/model"
-	"wilikidi/socket/service"
-	"wilikidi/socket/utils"
+	"wilikidi/gin/model"
+	"wilikidi/gin/service"
+	"wilikidi/gin/utils"
 )
 
 func Validator(c *gin.Context) {
